@@ -629,8 +629,8 @@ class Bundle(object):
     }
     
     def __init__(self, file_name):
-        self.file_name = file_name
-        fh = open(file_name, 'rb')
+        self.file_name = file_name[0]
+        fh = open(self.file_name, 'rb')
         
         # Read header assuming little endiam
         endian = '<'
